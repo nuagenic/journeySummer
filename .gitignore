@@ -1,0 +1,25 @@
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore dependencies installed by npm or yarn
+node_modules/
+yarn.lock
+
+# Ignore logs
+*.log
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore environment configuration files
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production.local
+
+# Ignore macOS-specific files
+.DS_Store
