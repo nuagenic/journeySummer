@@ -1,4 +1,7 @@
+// import {translateText} from "./api/papagoDetect.js"
+
 const axios = require('axios');
+
 
 // 파파고 API 요청을 위한 클라이언트 ID와 클라이언트 시크릿
 const clientId = 'm_oLETDzY8QjOoC1umee';
@@ -33,7 +36,8 @@ async function translateText(text, sourceLang, targetLang) {
 }
 
 // 번역 함수 사용 예시
-const sourceText = '번역할 만한 괜찮은 말 없어?'; // 번역할 텍스트
+// const sourceText = transSource; // 번역할 텍스트
+const sourceText = '빠져버리는 daydream';
 const sourceLang = 'ko'; // 원본 언어 코드 (Korean)
 const targetLang = 'en'; // 번역할 언어 코드 (English)
 
