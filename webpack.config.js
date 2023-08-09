@@ -1,5 +1,6 @@
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   entry: "./js/app.js",
@@ -16,5 +17,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [new Dotenv()],
+  plugins: [new Dotenv(), new NodePolyfillPlugin()],
+  externals: {
+    net: "empty",
+    tls: "empty",
+    fs: "empty",
+  },
+  devtool: "source-map",
+  // optimization: {
+  //   minimize: false,
+  // },
 };

@@ -2,17 +2,24 @@
   "name": "journeysummer",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx http-server",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "start": "concurrently \"npm run watch\" \"npx http-server\""
   },
   "dependencies": {
-    "openai": "^3.3.0"
+    "axios": "^1.4.0",
+    "browserify-sign": "^4.2.1",
+    "cheerio": "^1.0.0-rc.12",
+    "genius-api": "^0.4.1",
+    "openai": "^3.3.0",
+    "readable-stream": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "babel-loader": "^9.1.3",
-    "dotenv-webpack": "^8.0.1",
+    "concurrently": "^8.2.0",
+    "dotenv-webpack": "^3.0.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
